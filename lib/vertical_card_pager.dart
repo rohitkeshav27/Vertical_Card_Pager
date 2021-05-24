@@ -245,12 +245,19 @@ class CardControllerWidget extends StatelessWidget {
                 Positioned.fill(
                   child: images![i],
                 ),
-                Align(
-                    child: Text(
-                  titles![i],
-                  style: titleTextStyle.copyWith(fontSize: getFontSize(i)),
-                  textAlign: TextAlign.center,
-                )),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Center(
+                      child: Text(
+                        titles![i],
+                        style:
+                            titleTextStyle.copyWith(fontSize: getFontSize(i)),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
